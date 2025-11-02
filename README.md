@@ -15,38 +15,37 @@ Advancements in large language models (LLMs) are transforming the healthcare lan
 - First published in 1899. The Merck Manuals have evolved into one of the most respected and widely used medical reference resources globally.
 - The dataset is provided as a PDF file containing over 4,000 pages, systematically organized into 23 sections to facilitate structured knowledge retrieval and analysis.
 
-### Environment Setup
+## Environment Setup
 
-- It is recommended to use Google Colab for this project. Google Colab offers ready-to-use environment that avoids the time-consuming and error-prone setup involved in local installations.
-- It comes pre-configured with essential libraries, eliminating dependency conflicts and ensuring compatibility.
+- It is recommended to use Google Colab for this Notebook. Google Colab offers ready-to-use environment that avoids the time-consuming and error-prone setup involved in local installations.
+
 - To boost performance, make sure to set the runtime to use the T4 GPU.
+    To ensure you're using the T4 GPU runtime in Google Colab, follow these steps:
 
-1. Python virtual environment:
+    * From the menu bar at the top of the page, select `Runtime`.
+    * In the dropdown menu that appears, select `Change runtime type`.
+    * In the "Runtime type" dropdown within the dialog box, select `T4 GPU`.
+    * Click the `Save` button.
+    * ![](./colab_runtime_settings.png)
 
-```bash
-# Create a virtual environment
-python -m venv .venv
+## About the Models Used in this Notebook
 
-# Activate the virtual environment
-# On Windows
-.venv\Scripts\activate
-# On macOS/Linux
-source .venv/bin/activate
-```
+**llama-cpp-python** is a Python wrapper for llama.cpp, a universal LLM inference library that runs models efficiently using the GGUF file format.
 
-2. Install Required Packages
+**GGUF (GGML Universal File)** is a binary format storing model weights and metadata in a single file. It uses quantization to reduce precision, decreasing memory usage and increasing inference speed.
 
-After activating the virtual environment, install the necessary packages listed in `requirements.txt`:
-```bash
-pip install -r requirements.txt
-```
-```bash
-pip install -r requirements.txt
-```
+**Model Compatibility**: Supports any GGUF-converted model including Llama, Mistral, CodeLlama, Gemma, and Qwen.
 
-3. Deactivate the Virtual Environment
+**Key Components**:
+- `Llama()` class: Main interface for loading and running models
+- `hf_hub_download()`: A function from the Hugging Face Hub library to download specific files from Hugging Face repositories with automatic caching
 
-To deactivate the virtual environment, simply run:
+**Models Used in This Notebook**
 
-```bash
-deactivate
+All models used are freely available from Hugging Face, requiring no API keys or credits.
+
+| Model | Repository | File | Model card |
+|-------|------------|------|---------|
+| Llama-2-13B-chat | `TheBloke/Llama-2-13B-chat-GGUF` | `llama-2-13b-chat.Q5_K_M.gguf` | https://huggingface.co/TheBloke/Llama-2-13B-chat-GGUF |
+| Mistral-7B-Instruct-v0.2 | `TheBloke/Mistral-7B-Instruct-v0.2-GGUF` | `mistral-7b-instruct-v0.2.Q6_K.gguf` | https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF |
+| GTE-Large | `thenlper/gte-large` | SentenceTransformer | https://huggingface.co/thenlper/gte-large |
