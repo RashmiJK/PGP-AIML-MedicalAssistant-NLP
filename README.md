@@ -13,7 +13,9 @@ Advancements in large language models (LLMs) are transforming the healthcare lan
 - The dataset is derived from The Merck Manuals, medical references published by Merck & Co.
 - It encompasses a comprehensive range of topics, including medical disorders, diagnostic procedures, laboratory tests, and pharmaceutical information.
 - First published in 1899. The Merck Manuals have evolved into one of the most respected and widely used medical reference resources globally.
-- The dataset is provided as a PDF file containing over 4,000 pages, systematically organized into 23 sections to facilitate structured knowledge retrieval and analysis.
+- The dataset is a PDF file containing over 4,000 pages, systematically organized into 23 sections to facilitate structured knowledge retrieval and analysis.
+
+**Note**: The dataset used is not shared due to licensing restrictions. This notebook is compatible with any PDF files. The MERCK MANUAL OF DIAGNOSIS AND THERAPY can be found on third-party document sharing sites.
 
 ## Environment Setup
 
