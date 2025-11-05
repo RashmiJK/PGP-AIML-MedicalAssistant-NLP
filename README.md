@@ -1,8 +1,18 @@
 ## Essential Concepts in Natural Language Processing and Generative AI
 
-Placeholder for concepts learnt during the course.
+### Project Groundwork
 
-[![Alt text 1](NLP_fundamentals.jpg)](NLP_fundamentals.jpg)
+This repository builds upon key foundations of Natural Language Processing (NLP): text embeddings, the transformer architecture at the core of large language models (LLMs), and Retrieval-Augmented Generation (RAG) for knowledge-grounded responses enhanced by prompt engineering.
+
+- Embeddings: Text is represented as numerical vectors that encode meaning, similarity, and context for downstream NLP tasks. Classic methods like Word2Vec (CBOW/Skip-gram) and GloVe learn word relationships based on co-occurrence patterns (“a word is characterized by the company it keeps”). Contextual models like BERT extend this by making word vectors sentence-dependent, capturing nuanced meanings. Cosine similarity measures how closely word vectors relate in context.
+
+- Transformers: A deep neural architecture using self-attention and positional encoding to model long-range dependencies and contextual relevance within sequences — the foundation of all modern LLMs.
+
+- Large Language Models (LLMs): Transformer-based networks trained on web-scale text for language understanding and generation. They learn general patterns through pre-training, refine behavior through fine-tuning and RLHF, and are guided toward desired outputs via prompt engineering.
+
+- Retrieval-Augmented Generation (RAG): Extends LLMs by grounding responses in external knowledge sources. It retrieves relevant data, augments the input prompt with that context, and generates responses that are more accurate and verifiable.
+
+[![Alt text 1](NLP_fundamentals.png)](NLP_fundamentals.png)
 
 ## Problem Statement
 
@@ -48,6 +58,5 @@ All models used are freely available from Hugging Face, requiring no API keys or
 
 | Model | Repository | File | Model card |
 |-------|------------|------|---------|
-| Llama-2-13B-chat | `TheBloke/Llama-2-13B-chat-GGUF` | `llama-2-13b-chat.Q5_K_M.gguf` | https://huggingface.co/TheBloke/Llama-2-13B-chat-GGUF |
 | Mistral-7B-Instruct-v0.2 | `TheBloke/Mistral-7B-Instruct-v0.2-GGUF` | `mistral-7b-instruct-v0.2.Q6_K.gguf` | https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF |
 | GTE-Large | `thenlper/gte-large` | SentenceTransformer | https://huggingface.co/thenlper/gte-large |
