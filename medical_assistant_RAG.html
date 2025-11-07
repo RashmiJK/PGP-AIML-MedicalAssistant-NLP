@@ -9056,7 +9056,7 @@ BertTokenizerFast(name_or_path='thenlper/gte-large', vocab_size=30522, model_max
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Connect to Google Drive to load the PDF</span>
@@ -10960,21 +10960,6 @@ completion_tokens =  69
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><span style="color: blue;"> <strong>Observation</strong></span></p>
-<ul>
-<li>Response is in bullet list</li>
-<li>There are exactly 4 bullet points</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="7---Output-Evaluation">7 - Output Evaluation<a class="anchor-link" href="#7---Output-Evaluation">¶</a></h2>
 </div>
 </div>
@@ -11571,6 +11556,23 @@ Overall rating: 4 - The context is mostly relevant, covering key aspects but wit
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><span style="color: blue;"> <strong>Observation</strong></span></p>
+<ul>
+<li>The RAG evaluation using the LLM-as-a-judge method provides detailed faithfulness and relevance scores with step-by-step reasoning for each query.</li>
+<li>Notably, Query 3 exhibits a faithfulness score of 3, suggesting the AI's response was only partially derived from the provided context. Query 5 received a relevance score of 4, indicating the retrieved context was mostly relevant but had minor gaps in addressing all aspects of the question.</li>
+<li>These score variations across different queries highlight the influence of prompt engineering, retrieved context quality, and the inherent non-deterministic nature of LLMs on RAG performance.</li>
+<li>The observations suggest that fine-tuning the RAG components (chunking, retrieval parameters, and prompt design) can improve faithfulness and relevance. Supplementing automated evaluation with human annotation can further enhance the reliability of the evaluation process.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="8---Actionable-Insights-and-Business-Recommendations">8 - Actionable Insights and Business Recommendations<a class="anchor-link" href="#8---Actionable-Insights-and-Business-Recommendations">¶</a></h2>
 </div>
 </div>
@@ -11614,30 +11616,16 @@ Overall rating: 4 - The context is mostly relevant, covering key aspects but wit
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="s2">"/content/drive/MyDrive/Colab Notebooks/Project-5/medical_assistant_RAG.ipynb"</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[NbConvertApp] Converting notebook /content/drive/MyDrive/Colab Notebooks/Project-5/medical_assistant_RAG.ipynb to html
-[NbConvertApp] Writing 573900 bytes to /content/drive/MyDrive/Colab Notebooks/Project-5/medical_assistant_RAG.html
-</pre>
 </div>
 </div>
 </div>
